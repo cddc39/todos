@@ -6,7 +6,7 @@ FROM node:lts-alpine AS builder
 
 # Install node modules
 WORKDIR /app
-COPY "package*.json" "./"
+COPY "package*.json" .
 RUN npm ci
 
 # Build app
