@@ -1,9 +1,6 @@
 # App builder
 FROM node:lts-alpine AS builder
 
-# # Install fsevents dependencies
-# RUN apk add g++ make python3
-
 # Install node modules
 WORKDIR /app
 COPY "package*.json" .
