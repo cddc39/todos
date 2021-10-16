@@ -13,6 +13,7 @@ export default {
     ];
     return {
       TodoLists: ref(exampleData),
+      msg: "",
     };
   },
   methods: {
@@ -30,6 +31,7 @@ export default {
 </script>
 
 <template>
+  <h1>Todo</h1>
   <div class="container">
     <input type="text" v-model="msg" />
     <button @click="Create">Create</button>
