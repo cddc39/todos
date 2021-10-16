@@ -12,11 +12,5 @@
     "types": ["vite/client", "@types/jest", "cypress"],
     "useDefineForClassFields": true
   },
-  "include": [
-    "e2e/**/*.spec.ts",
-    "src/**/*.ts",
-    "src/**/*.d.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue"
-  ]
+  "include": ["e2e/**/*.spec.ts", "src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
 }

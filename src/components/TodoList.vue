@@ -1,6 +1,6 @@
 <template>
   <ul>
-    <li v-for="(todolist, index) in TodoLists" :key="index">
+    <li v-for="(todolist, index) in todoLists" :key="index">
       <span class="name">{{ todolist.name }}</span>
       <span class="delete" @click="Delete(todolist.id)"> x </span>
     </li>
@@ -10,8 +10,18 @@
 <script>
 export default {
   props: {
-    TodoLists: Array,
-    Delete: Function,
+    todoLists: {
+      type: Array,
+      default() {
+        return []
+      },
+    },
+    delete: {
+      type: Function,
+      default() {
+        return
+      },
+    },
   },
-};
+}
 </script>
