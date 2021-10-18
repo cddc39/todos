@@ -9,8 +9,10 @@
     "sourceMap": true,
     "strict": true,
     "target": "esnext",
-    "types": ["vite/client", "@types/jest", "cypress"],
-    "useDefineForClassFields": true
+    "types": ["@types/jest", "jest", "vite/client"],
+    "useDefineForClassFields": true,
+    "typeRoots": ["./src/types", "node_modules/@types"]
   },
-  "include": ["e2e/**/*.spec.ts", "src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
+  "exclude": ["node_modules", "dist", "**/*.spec.ts"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"]
 }
