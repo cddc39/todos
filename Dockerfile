@@ -1,9 +1,9 @@
 # App builder
-FROM node:lts-alpine AS builder
+FROM node:16-alpine AS builder
 
 # Install node modules
 WORKDIR /app
-COPY "package*.json" .
+COPY "package*.json" ./
 RUN npm ci
 
 # Build app
@@ -11,7 +11,7 @@ COPY "./" "/app"
 RUN npm run build
 
 # App server
-FROM node:lts-alpine AS server
+FROM node:16-alpine AS server
 
 # Install and configure server
 RUN npm install -g "serve"
