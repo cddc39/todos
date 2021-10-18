@@ -1,5 +1,5 @@
 # App builder
-FROM node:16-alpine AS builder
+FROM node:lts-alpine AS builder
 
 # Install node modules
 WORKDIR /app
@@ -11,7 +11,7 @@ COPY "./" "/app"
 RUN npm run build
 
 # App server
-FROM node:16-alpine AS server
+FROM node:lts-alpine AS server
 
 # Install and configure server
 RUN npm install -g "serve"
