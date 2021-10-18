@@ -4,8 +4,7 @@ FROM node:16-alpine AS builder
 # Install node modules
 WORKDIR /app
 COPY "package*.json" ./
-RUN npm install
-# RUN npm ci
+RUN npm ci
 
 # Build app
 COPY "./" "/app"
