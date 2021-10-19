@@ -81,17 +81,18 @@
   },
   "scripts": {
     "build": "vue-tsc --noEmit && vite build",
-    "build-container": "docker build --tag 'registry.digitalocean.com/dmikalova/todo:0.0.1' ./",
-    "container": "docker run --rm -it 'registry.digitalocean.com/dmikalova/todo:0.0.1'",
+    "build:container": "docker build --tag 'todo' ./",
+    "container": "docker run todo'",
     "cypress": "cypress run",
     "dev": "vite",
     "fmt": "prettier --write .",
-    "lint": "eslint .",
-    "push-container": "docker push 'registry.digitalocean.com/dmikalova/todo:0.0.1'",
+    "fmt:check": "prettier --check .",
+    "lint": "eslint . --fix",
+    "lint:check": "eslint . --max-warnings 0",
     "serve": "vite preview",
     "test": "npm run test:unit",
     "test:e2e": "start-server-and-test dev http-get://localhost:3000 cypress",
     "test:unit": "jest src"
   },
-  "version": "0.0.0"
+  "version": "0.0.1"
 }
